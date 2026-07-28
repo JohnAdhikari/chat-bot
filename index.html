@@ -8,6 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      (function() {
+        var theme = localStorage.getItem("zone_ai_theme");
+        if (theme) {
+          document.documentElement.setAttribute("data-theme", theme);
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="/chat-bot/assets/index-ClFkUw7-.js"></script>
     <link rel="stylesheet" crossorigin href="/chat-bot/assets/index-JWX6wRzh.css">
   </head>
