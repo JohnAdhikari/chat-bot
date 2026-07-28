@@ -1,11 +1,11 @@
-import "./footer.css"
+import "./footer.css";
 
-function Footer(){
-    return(
-        <div className="footer" >
-            <p className="cc">© {new Date().getFullYear()} John Adhikari</p>
-        </div>
-    );
+function Footer() {
+  return (
+    <footer className="footer">
+      <p>&copy; {new Date().getFullYear()} Zone AI. All rights reserved.</p>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
