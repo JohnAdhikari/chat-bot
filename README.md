@@ -1,16 +1,45 @@
-# React + Vite
+# 🤖 Zone AI — Chat Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern AI chat interface where you can pick your model (Gemini 2.0 Flash or GPT-4o Mini), bring your own API key, and start chatting. Built with a React frontend and a FastAPI proxy backend.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔀 **Model picker** — switch between Gemini 2.0 Flash and GPT-4o Mini
+- 🔑 **Bring your own key** — paste your API key; it stays in your browser's `localStorage`
+- ⚡ **FastAPI proxy** — a thin backend relays chat requests so keys stay out of the client bundle
+- 🌗 **Light / dark theme**
+- 📱 **Responsive** chat UI
 
-## React Compiler
+## 🧰 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer | Choice |
+|---|---|
+| Frontend | React 19, Vite 7 |
+| AI APIs | Google Gemini 2.0 Flash, OpenAI (GPT-4o Mini) |
+| Backend | FastAPI (`backend/app.py`) |
+| Hosting | GitHub Pages + GitHub Actions |
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend (proxy)
+
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn app:app --reload
+```
+
+The proxy exposes `/api/chat` and `/health`.
+
+### Frontend
+
+```bash
+npm install
+npm run dev
+```
+
+Open the app, choose a model, paste your API key, and start chatting.
+
+## 🌍 Live
+
+**https://JohnAdhikari.github.io/chat-bot/**
